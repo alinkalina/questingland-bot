@@ -5,8 +5,8 @@ from quest_bot_info import users, names_list, get_dict
 import shelve
 
 
-my_id = '1722704753'
-token = '6752421018:AAE3t9pFAZkhDC_zphZLC24ml1WHFhDN8TM'
+my_id = ''
+token = ''
 bot = telebot.TeleBot(token)
 
 
