@@ -2,11 +2,10 @@ import telebot
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 from quest_bot_game import menu_generation, send_next_question
 from quest_bot_info import users, names_list, get_dict
+from hidden_file import my_id, token
 import shelve
 
 
-my_id = ''
-token = ''
 bot = telebot.TeleBot(token)
 
 
