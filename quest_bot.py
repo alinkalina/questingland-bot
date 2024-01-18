@@ -1,5 +1,5 @@
 import telebot
-from telebot.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
+from telebot.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, InputFile
 from quest_bot_game import menu_generation, send_next_question
 from quest_bot_info import users, names_list, get_dict
 from hidden_file import my_id, token
@@ -107,6 +107,13 @@ def game_name_choosen(message):
     markup.add(KeyboardButton(text='🎮 Играть'))
     users[message.chat.id]['current_game'] = game
     users[message.chat.id]['current_level'] = game['game']
+    try:
+        with open(game['description-photo'], 'rb') as file:
+            bot.send_photo(message.chat.id, InputFile(file))
+        file.close()
+    except FileNotFoundError:
+        bot.send_message(message.chat.id, '_Здесь должно было быть фото, но, к сожалению, оно не загрузилось 😢_',
+                         parse_mode='Markdown')
     bot.send_message(message.chat.id, f"*{game['name']}*\n{game['description']}", parse_mode='Markdown',
                      reply_markup=markup)
 
