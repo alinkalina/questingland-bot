@@ -284,5 +284,3 @@ try:
 except Exception as e:
     print(e)
     users = {}
-
-# requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

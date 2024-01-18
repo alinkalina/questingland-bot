@@ -52,24 +52,3 @@ def send_next_question(message, bot):
             users[message.chat.id]['results'][users[message.chat.id]['current_game']['name']]['win'] += 1
         else:
             bot.send_message(user_id, users[user_id]['current_game']['lose'])
-        # users[user_id]['current_game'] = {}
-        # users[user_id]['current_level'] = {}
-
-
-#
-# for g in games:
-#     print(g['name'])
-#     game = g['game']
-#     while True:
-#         if game['variants']:
-#             print(game['text'])
-#             s = ''
-#             for v in game['variants'].keys():
-#                 s = s + v + ' '
-#             print(s)
-#             choice = input()
-#             game = game['variants'][choice]
-#         else:
-#             print(game['text'])
-#             print('end')
-#             break
