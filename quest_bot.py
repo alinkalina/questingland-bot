@@ -9,6 +9,10 @@ import shelve
 bot = telebot.TeleBot(token)
 
 
+for u in users.keys():
+    bot.send_message(u, 'Бот снова работает!')
+
+
 def check_game_name(message):
     return message.text in names_list()
 
