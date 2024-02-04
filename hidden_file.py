@@ -1,2 +1,0 @@
-my_id = '1722704753'
-token = '6852457496:AAHVbImSoPhA6jZUFcc9jYPDD81xhF_J5GE'
